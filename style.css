@@ -1,0 +1,41 @@
+
+.container{
+display: flex;
+background-color: red;
+flex-direction: column;
+justify-content: space-between;
+min-height: 100%;
+
+}
+
+
+.header{
+background-color:purple;
+flex:2;
+margin: 2% 2% 1% 2%;
+}
+
+.main {
+   
+    flex: 8;
+    margin: .5% 2% 2% 2%;
+    background-color:orange;
+}
+
+.ui{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ui> .panel{
+flex:1;
+margin: 1%;
+background-color: green;
+
+}
+html, body {
+    height: 100%;
+
+}

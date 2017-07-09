@@ -1,9 +1,12 @@
 ////Item constructor
-function Item(name, price){
+function Item(name, price,id){
   
   this.name=name;
   this.price=price;
   this.quantity=1;
+  this.id=id;
+
+  var icon=document.
   
   this.scanItem= function(){
       console.log("Item Name:"+this.name+"\n"+"Item Price:"+this.price);
@@ -11,6 +14,29 @@ function Item(name, price){
   
   
 };
+
+function store(){
+
+this.inventory=[];
+this.inventory.Apple =new Item("Apple", .50,0);
+this.inventory.Pear =new Item("Pear", .75),1;
+this.inventory.Butter =new Item("Butter", 3.00,2);
+
+forEach(function(thing, index){
+var button=document
+
+
+})
+
+
+////populate dom with buttons, each with id from id
+
+};
+
+
+
+
+
 
 ////Shopping cart constructor
 function ShoppingCart(){
@@ -46,7 +72,7 @@ function ShoppingCart(){
     
     
     ////check items list and update number if appropiate
-    this.addItem=function(itemToAdd){
+    this.addItem=function(itemToAddId){
       
         var  cartItemsList=this.items;
         var _objectCheck=Object.getPrototypeOf(itemToAdd)==Object.getPrototypeOf(Item);
@@ -61,28 +87,31 @@ function ShoppingCart(){
           
           for(var i=1;i<cartItemsList.length;i++){
           //  cartItemsList.(function(listItem,cartIndex){ 
-                if(cartItemsList[i].name==itemToAdd.name){
+                if(cartItemsList[i].id==itemToAdd.id){
                     cartItemsList[i].quantity++;
                     this.total+=listItem.price;
                     this.cartCheck();
                     return true;
+                    ///update dom grid element
                 }
             } 
-       } 
+       }
+       //create dom grid element 
        cartItemsList.push(itemToAdd);
        this.total+=itemToAdd.price;
-        console.log("You added 1 "+itemToAdd.name);
-        this.cartCheck();
+       console.log("You added 1 "+itemToAdd.name);
+       this.cartCheck();
+       return true;
+       
     }////Exit addItem
 };////End shoppingCart constructor
   
   
   
-var Apple =new Item("Apple", .50);
-var Pear =new Item("Pear", .75);
+
 var desCart= new ShoppingCart();
-desCart.addItem(Apple);
-desCart.addItem(Apple);
-desCart.addItem(Pear);
+// desCart.addItem(Apple);
+// desCart.addItem(Apple);
+// desCart.addItem(Pear);
 desCart.checkOut();
 //console.log(Apple.price);
