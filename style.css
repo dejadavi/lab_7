@@ -11,13 +11,14 @@ min-height: 100%;
 
 .header{
 background-color:purple;
-flex:2;
+flex:4;
+min-height: 10em;
 margin: 2% 2% 1% 2%;
 }
 
 .main {
    
-    flex: 8;
+    flex: 6;
     margin: .5% 2% 2% 2%;
     background-color:orange;
 }
@@ -30,12 +31,56 @@ margin: 2% 2% 1% 2%;
 }
 
 .ui> .panel{
-flex:1;
+flex:0 1 20em;
+display:flex;
+flex-flow: row wrap;
 margin: 1%;
+padding: .25em;
 background-color: green;
+justify-content: space-around;
+align-content: flex-start;
 
 }
+
+.food_button, .dropable , .bd{
+flex: 1 0 50%;
+max-width: 8em;
+height: 8em;
+margin: 1em;
+
+border: 0em solid white;
+
+
+}
+
+
+
+.food_button, .dropped ,.bd{
+    flex: 1 0 50%;
+max-width: 8em;
+height: 8em;
+margin: 1em;
+border: 0em solid white;
+background-color: blue;
+opacity:1;
+font-family: Helvetica;
+font-size: 12px;
+}
+.food_button:last-child:nth-child(even), .dropable:last-child:nth-child(even){
+  visibility: hidden;
+
+}
+
+ button{ 
+height: 100%;
+width:100%;
+opacity: 0;
+font-family: Helvetica;
+font-size: 12px;
+
+ }
 html, body {
     height: 100%;
+
 
 }

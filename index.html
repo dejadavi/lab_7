@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Swag Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -9,9 +10,26 @@
     <div class="container">
         <div class="header content"> Flo-Cery  </div>
         <div class="main content ui">
-            <div class="panel">Panel1</div>
-            <div class="panel">Panel2</div>
-            <div class="panel">Panel3</div>
+            <div class="panel">
+                <div id="0" class="food_button b1" 
+                    draggable="true"
+                    onDragStart="event.dataTransfer.setData('text/plain',null)" >
+                    Apple
+                </div>
+                <div  draggable="true"
+                    onDragStart="event.dataTransfer.setData('text/plain',null)" id="1" class="food_button b2">Orange</div>
+                <div  draggable="true"
+                    onDragStart="event.dataTransfer.setData('text/plain',null)" id="2" class="food_button b3">Pear</div>
+                <div  draggable="true"
+                    onDragStart="event.dataTransfer.setData('text/plain',null)" id="3" class="food_button b4">Grape</div>
+            </div>
+            <div id="panel2" class="panel">
+            <div class="bd"><button type="button" onclick="" data-id="" class="dropable"></button></div>
+            <div class="bd"> <button data-id="" class="dropable"></button></div>
+             <div class="bd">    <button data-id="" class="dropable"></button></div>
+            
+            </div>
+            <div  id="total" class="panel panel3"></div>
 
 
         </div>
